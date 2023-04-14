@@ -1,81 +1,82 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Hangdog - Home">
+  <div
+    class="text-white w-screen h-screen bg-black font-jost bg-[url(/bg.jpeg)] bg-no-repeat bg-cover"
+  >
+    <div
+      class="absolute w-screen h-screen bg-gradient-to-br from-transparent to-[rgba(000,000,000,0.7)]"
+    >
+      <div
+        class="absolute w-screen h-screen bg-gradient-to-b from-[rgba(000,000,000,0.5)] to-transparent"
+      >
+        <div class="pointer-events-auto">
+          <nav
+            class="w-full py-6 px-12 flex justify-center lg:justify-end items-center"
+          >
+            <!-- <div class="flex items-baseline"> -->
+            <!-- <h2 class="font-bold text-2xl">HANGDOG</h2>
+            <img src="/logo.png" alt="logo" class="ml-[-10px] h-10" /> -->
+            <!-- </div> -->
+            <ul class="flex items-center gap-10">
+              <li><a href="">first visit</a></li>
+              <li><a href="">pricing & memberships</a></li>
+              <li><a href="">kids</a></li>
+              <li><a href="">groups</a></li>
+              <li>
+                <button class="p-3 bg-transparent bg-white px-5 text-black"
+                  >Book a climb</button
+                >
+              </li>
+            </ul>
+          </nav>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+          <main
+            class="w-full lg:w-2/3 h-screen absolute top-0 right-0 flex justify-center items-center pointer-events-none"
+          >
+            <div class="flex flex-col items-end pointer-events-auto">
+              <div class="flex items-baseline">
+                <h1 class="text-7xl font-bold drop-shadow-2xl shadow-black">
+                  HANGDOG
+                </h1>
+                <img src="/logo.png" alt="logo" class="ml-[-50px] h-28" />
+              </div>
+              <p class="text-xl font-light">bouldering & sport climbing</p>
+
+              <div class="flex self-center gap-5 mt-24">
+                <button
+                  class="p-3 hover:bg-white hover:text-black transition-all bg-[rgba(000,000,000,0.2)] border-2 border-white px-5 text-white"
+                  >What's involved?</button
+                >
+                <button
+                  class="p-3 bg-transparent bg-white px-5 text-black hover:bg-gray-100 transition-all"
+                  >Book a climb</button
+                >
+              </div>
+            </div>
+          </main>
+
+          <footer
+            class="w-full lg:w-2/3 absolute bottom-0 right-0 flex justify-center items-center mb-4 text-gray-300"
+          >
+            <div class="flex gap-5">
+              <span>
+                <b>Email</b>
+                <a class="font-light" href="mailto:info@hangdog.co.nz"
+                  >info@hangdog.co.nz</a
+                >
+              </span>
+
+              <span>
+                <b>Phone</b>
+                <a class="font-light" href="tel:+64045899181">(04) 589 9181</a>
+              </span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
