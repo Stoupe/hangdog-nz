@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -13,30 +14,14 @@ import Layout from "../layouts/Layout.astro";
         class="absolute w-screen h-screen bg-gradient-to-b from-[rgba(000,000,000,0.5)] to-transparent"
       >
         <div class="pointer-events-auto">
-          <nav
-            class="w-full py-6 px-12 flex justify-center lg:justify-end items-center"
-          >
-            <!-- <div class="flex items-baseline"> -->
-            <!-- <h2 class="font-bold text-2xl">HANGDOG</h2>
-            <img src="/logo.png" alt="logo" class="ml-[-10px] h-10" /> -->
-            <!-- </div> -->
-            <ul class="flex items-center gap-10">
-              <li><a href="">first visit</a></li>
-              <li><a href="">pricing & memberships</a></li>
-              <li><a href="">kids</a></li>
-              <li><a href="">groups</a></li>
-              <li>
-                <button class="p-3 bg-transparent bg-white px-5 text-black"
-                  >Book a climb</button
-                >
-              </li>
-            </ul>
-          </nav>
+          <Header showLogo={false} />
 
           <main
             class="w-full lg:w-2/3 h-screen absolute top-0 right-0 flex justify-center items-center pointer-events-none"
           >
-            <div class="flex flex-col items-end pointer-events-auto">
+            <div
+              class="flex flex-col items-end pointer-events-auto animate-fadeIn"
+            >
               <div class="flex items-baseline">
                 <h1 class="text-7xl font-bold drop-shadow-2xl shadow-black">
                   HANGDOG
